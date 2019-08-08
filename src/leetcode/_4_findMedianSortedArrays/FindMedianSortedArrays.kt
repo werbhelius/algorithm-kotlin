@@ -79,6 +79,8 @@ class Solution {
 
     /**
      * 把寻找中位数当作寻找第 K 小的数，每次循环排除掉 k/2 个数
+     * 时间复杂度 O(log(m+n))
+     * 空间复杂度 o(1)
      */
     fun findMedianSortedArrays3(nums1: IntArray, nums2: IntArray): Double {
         val len = nums1.size + nums2.size
