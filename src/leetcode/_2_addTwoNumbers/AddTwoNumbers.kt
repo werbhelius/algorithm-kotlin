@@ -18,26 +18,28 @@ class Solution {
 
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         val dummyHead = ListNode(0)
-        var i = l1
-        var j = l2
-        var current = dummyHead
+        var copyL1 = l1
+        var copyL2 = l2
+        var moveNode = dummyHead
         var carry = 0
 
-        while (i != null || j != null) {
-            val p = i?.`val` ?: 0
-            val q = j?.`val` ?: 0
-            val sum = p + q + carry
-            carry = sum / 10
-            current.next = ListNode(sum % 10)
-            current = current.next!!
+        while (copyL1 != null || copyL2 != null || carry > 0) {
+            val p = copyL1?.`val` ?: 0
+            val q = copyL2?.`val` ?: 0
+            var l3 = p + q + carry
+            carry = 0
 
-            i = i?.next
-            j = j?.next
+            if (l3 > 9) {
+                carry = 1
+                l3 -= 10
+            }
 
-        }
+            moveNode.next = ListNode(l3)
 
-        if (carry > 0 ) {
-            current.next = ListNode(carry)
+            moveNode = moveNode.next!!
+            copyL1 = copyL1?.next
+            copyL2 = copyL2?.next
+
         }
 
         return dummyHead.next
