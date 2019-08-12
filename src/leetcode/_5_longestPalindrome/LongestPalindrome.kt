@@ -1,5 +1,8 @@
 package leetcode._5_longestPalindrome
 
+/**
+ * https://leetcode-cn.com/problems/longest-palindromic-substring/
+ */
 class Solution {
 
     /***

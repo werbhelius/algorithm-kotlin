@@ -1,5 +1,8 @@
 package leetcode._1_twosum
 
+/**
+ * https://leetcode-cn.com/problems/two-sum/
+ */
 class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = hashMapOf<Int, Int>()
