@@ -9,7 +9,7 @@ import java.util.*
 class Solution {
 
     /**
-     * 排序后，双指针同时向0移动，牛逼啊这个
+     * 排序后，双指针
      */
     fun threeSum(nums: IntArray): List<List<Int>> {
 
